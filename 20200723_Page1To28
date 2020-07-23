@@ -1,0 +1,44 @@
+//a first look at input/output
+1.fundamental to the iostream library are 2 types named istream and ostream
+2.cin -> standard input
+  cout -> standard output
+  cerr -> standard error
+3.#include <iostream>, the nam inside angle brackets refers to a header
+4.an expression yields a result and is composed of 1 or more operands and (usually) an operator
+5.the << operator takes 2 operands: the left hand operand must be an ostream object; the right-hand operand is a value to print
+  e.g. (std::cout << "enter 2 numbers: ") << std::endl;
+                     ⬆️                          ⬆️
+                ostream object             value to print
+6.endl called manipulator which can end the current line and flushing the buffer associated with that device
+7.namespace allow us to avoid inadvertent collisions between the names we define and uses of those same names inside a library
+8.scope operator(::) means that we want to used functions already defined in the namespace std
+
+//a word about comments
+1.// -> single line
+  /**/ -> mutiple lines (inherited from C)
+
+//flow of control
+1.an istream becomes invalid when we hit end-of-file or encounter an invalid input
+2.how to use end-of-file 
+  windows systems -> control-z
+  UNIX systems(include Mac OS X) -> control-d
+
+//introducing Classes
+1.in c++ we define our own data structures by defining a class
+2.header files that we write usually have a suffix of .h but some programmers use .H, .Hpp or .hxx.
+3.the standard library headers typically have no suffix at all
+4.every class defines a type. The type name is the same as the name of the class.
+5.item1.isbn() == item2.isbn(), calls a member function named isbn. A member function is a function that is defined as part of a class
+
+//defined terms
+1.argument: value passed to a function
+2.cerr: usually used for error messages or other output that is not part of the normal logic of the program
+3.clog: usually used to report information about program execution to a log file
+4.data structure: a logical grouping of data and operations on that data
+5.edit-compile-debug: the process of getting a program to execute properly
+6.library type: type, such as istream, defined by the standard library
+7.each program must have one and only one function named main
+8.namespace: namespaces help avoid inadvertent name clashes
+9.std: name of the namespace used by the standard library
+10.() operator: call operator
+11.:: operator: scope operator
