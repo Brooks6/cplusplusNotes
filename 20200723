@@ -1,0 +1,13 @@
+//a first look at input/output
+1.fundamental to the iostream library are 2 types named istream and ostream
+2.cin -> standard input
+  cout -> standard output
+  cerr -> standard error
+3.#include <iostream>, the nam inside angle brackets refers to a header
+4.an expression yields a result and is composed of 1 or more operands and (usually) an operator
+5.the << operator takes 2 operands: the left hand operand must be an ostream object; the right-hand operand is a value to print
+  e.g. (std::cout << "enter 2 numbers: ") << std::endl;
+                     ⬆️                          ⬆️
+                ostream object             value to print
+6.endl called manipulator which can end the current line and flushing the buffer associated with that device
+7.
