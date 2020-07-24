@@ -1,0 +1,7 @@
+//identifiers
+1.identifiers must begin with either a letter or an underscore
+
+//scope of a name
+1.a scope is a part of the program in which a name has a particular meaning. Most scopes in C++ are delimited by curly braces
+2.the name main - like most names defined outside a function - has global scope
+3.the variable sum has block scope
