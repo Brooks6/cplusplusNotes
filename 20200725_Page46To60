@@ -1,0 +1,45 @@
+//identifiers
+1.identifiers must begin with either a letter or an underscore
+
+//scope of a name
+1.a scope is a part of the program in which a name has a particular meaning. Most scopes in C++ are delimited by curly braces
+2.the name main - like most names defined outside a function - has global scope
+3.the variable sum has block scope
+
+//compound types
+1.a compound type is a type that is defined in terms of another type(references and pointers)
+2.a declaration is a base type followed by a list of declarators. Each declarator names a variable and gives the variable a type
+  that is related to the base type
+
+//references
+1.a reference defines an alternative name for an object and it must be initialized(initializer must be an object
+2.a reference is not an object, instead, a reference is just another name for an already existing object
+
+//taking the address of an object
+1.a pointer is a compound type that "points to" another type
+  e.g. int*p = &ival; //p holds the address of ival; p is a pointer to ival
+  
+//pointer value
+1.values in pointers have 4 states: an object, locations, a null pointer, an invalid value
+
+//using a pointer to access an object
+1.when a pointer points to an object, we can use the dereference operator(the * operator) to access that object
+2.we may dereference only a valid pointer that points to an object
+
+//null pointer
+1.a null pointer does not point to any object
+2.3 ways to create a null pointer
+  int *p = nullptr; //the most direct approach
+  int *p2 = 0;
+  int *p3 = NULL;
+  
+//other pointer operations
+1.any nonzero pointer evaluates as true(in while loops or if loops)
+2.it is possible for a pointer to an object and a pointer one past the end of a different object to hold the same address. Such 
+  pointers will compare equal??
+3.the type void* is a special pointer type that can hold the address of any object
+
+//const qualifier
+1.we can make a variable unchangeable by defining the variable's type as const
+2.the value of a const must be initialized
+3.to share a const object among multiple files, you must define the variable as extern
