@@ -64,6 +64,9 @@
 2.declaration: makes a name known to the program
 3.definition: creates the associated entity, in addition to specifying the name and type, a definition also allocates storage and may provide
   the variable with an initial value
+  e.g extern int ix = 1024; definition
+      int iy; declaration and definition
+      extern int iz; declaration but not a definition
 4.variables must be defined exactly once but can be declared many times
 5.to use the same variable in multiple files, we must define that variable in one, and only one file. Other files that use that variable must
   declare, but not define that variable.
