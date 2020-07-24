@@ -1,0 +1,69 @@
+//arithmetic types
+1.the arithmetic types are divided into 2 categories: integral types(which include character and boolean type) and floating-point types
+2.type                meaning               minimum size
+  wchar_t             wide character        16bits
+  char16_t            unicode character     16bits
+  char32_t            unicode character     32bits
+(full table can be found in page.32)
+3.unicode is a standard for representing characters used in essentially any natural language
+4.byte: the smallest chunk of addressable memory
+5.word: the basic unit of storage, usually a small number of bytes
+6.on most machines a byte contains 8 bits and a word is either 32 or 64 bits, that is, 4 or 8 bytes
+7.the type determines how many bits are used and how to interpret those bits
+8.the floating-point tyoes represent single, double, and extended-precision values
+9.typically, floats are represented in 1 word(32 bits), doubles in 2 words(64 bits), and long doubles in either 3 or 4 words(96 or 128bits)
+
+//signed and unsigned types
+1.the integral types may be signed or unsigned. A signed type represents negative or positive numbers(including zero); an unsigned type repres
+  -ents only values greater than or equal to zero.
+2.in pratice, long often has the same size as int
+
+//type conversions
+1.if we assign 1 of nonbool arithmetic types to a bool object, the result is false if the value is 0 and true otherwise
+2.if we assign a bool to 1 of the other arithmetic types, the resulting value is 1 if the bool is true and 0 if the bool is false
+3.if we assign an out-of-range value to an object of sined type, the result is undefined(may crash or produce garbage values)
+
+//character and character string literals
+1.the compiler appends a null character('\0') to every string literal.
+  e.g. literal "A" represents an array of 2 characters, the letter A and the null character
+
+//escape sequences
+1.some characters are nonprintable(such as backspace or control characters). So we use escape sequence to represent such characters
+2.important escape sequences
+  newline \n
+  alert(bell) \a
+  backspace \b
+  backslash \\
+  question mark \?
+  carriage return \r
+  formfeed \f
+3.a \ is followed b more than three octal digits, only the first three are associated with the \
+4.a \x ses up all the hex digits following it
+
+//specifying the type of a literal
+1.prefix          meaning                     type
+  u               unicode 16 character        char16_t
+  U               unicode 32 character        char32_t
+  L               wide character              wchar_t
+  u8              utf-8(string literals only) char
+2.suffix          type
+  u or U          unsigned
+  l or L          long
+  ll or LL        long long
+  f or F          float
+  l or L          long double
+3.'\101' = 'A', '\141' = 'a'
+
+//default initialization
+1.when we define a variable without an initializer, the variable is default initialized
+2.variables defined outside any function body are initialized to zero
+3.it is an error to copy or otherwise try to access the value of a variable whose value is undefined
+
+//variable declarations and definitions
+1.separate compilation lets us split our programs into several files, each of which can be compiled independently
+2.declaration: makes a name known to the program
+3.definition: creates the associated entity, in addition to specifying the name and type, a definition also allocates storage and may provide
+  the variable with an initial value
+4.variables must be defined exactly once but can be declared many times
+5.to use the same variable in multiple files, we must define that variable in one, and only one file. Other files that use that variable must
+  declare, but not define that variable.
