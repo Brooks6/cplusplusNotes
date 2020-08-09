@@ -1,0 +1,19 @@
+//Modern C++ and the C++ Standard
+  1.classical C++: pre c++11 standard
+    modern C++: 1)c++11: lots of new features
+                2)c++14: smaller changes
+                3)c++17: simplification
+              
+//how does it all work
+  1.the c++ build process: source code (compiler)-> object code (linker) -> c++ standard library or other libraries 
+  2.source code = .cpp files
+  3.object code = .obj files
+  4.IDE = integrated development environments 
+ 
+//compiler warnings
+  1.the compiler has recognized an issue with your code that could lead to a potential problem
+  2.it's only a warning because the compiler is still able to generate correct machine code
+
+//linker errors
+  1.the linker is having trouble linking all the object files together to create an executable
+  2.usually there is a library or object file that is missing
