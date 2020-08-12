@@ -1,3 +1,53 @@
 //runtime errors
-1.def: errors that occur when the program is executing
-  e.g
+  1.def: errors that occur when the program is executing
+    e.g: divide by zero, file not found, out of memory
+  2.reuslt: can cause your program to crash
+  3.solution: exception handling can help deal with runtime errors
+  
+//logic errors
+  1.def: errors or bugs in your code that cause your program to run incorrectly
+  2.source: logic errors are mistakes made by the programmer
+  
+//the structure of a c++ program
+  1.keywords: c++ ~ 90 (http:// en.cppreference.com)
+               java ~ 50
+               c ~ 32
+               python 33
+               
+//the main() function
+  1.return 0 indicates successful program execution
+  2.2 version: parameter or non-parameter
+  3.int main(int argc, char *argv[])
+                  ⬇️
+             argument count
+
+//declaring and initializing variable
+  1.naming variables:cant begin with numbers
+  2.3 ways to initialize: int age = 21; int age (21); int age {21}
+
+//what is a constant
+  1.5 ways to create constants:1)literal constants
+                               2)declared constants e.g. const keyword
+                               3)constant expressions e.g. constexpr keyword
+                               4)enumerated constants e.g. enum keyword
+                               5)defined constants e.g. #define
+  2.dont use defined constants in mordern c++!!!
+
+//vector
+  1.cantainer in the c++ standard template library
+  2.an array that can grow and shrink in size at execution time
+  3.provides similar semantics and syntax as arrays
+  4.can provide bounds checking
+  5.can use lots of cool functions like sort, reverse, find, and more
+  6.vector <int> test_scores (5); want 5 chars and the value will be set to zero automatically
+  7.initializing: vector <char> vowels {'a', 'e', 'i', 'o', 'u'}
+                  vector <double> temperatures (365, 85.0)
+  8.characteristics:1)dynamic size
+                    2)elements are all the same type
+                    3)stored contiguously in memory
+                    4)individual elements can be accessed by their position or index
+  9.accessing vector elements: vector_name.at(element_index);
+  10.add element: vector_name.push_back(element)
+  11.2 ways to accessing a 2D-vector:1)array syntax: vector_name[0][0];
+                                     2)vector syntax: vector_name.at[0].at[0];
+                            
