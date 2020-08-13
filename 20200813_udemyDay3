@@ -1,0 +1,60 @@
+//continue and break
+  1.continue:1)no further statement in the body of the loop are executed
+             2)control immediately goes directly to the beginning of the loop for the next iteration
+  2.break:1)no further statements in the body of the loop are executed
+          2)loop is immediately terminated
+          3)control immediately goes to the statement following the loop constrcut
+          
+//c-style strings e.g. char my_name[] {"Brooks"};
+  1.Sequence of characters:1)#include <cstring>
+                           2)contiguous in memory
+                           3)implemented as an array of characters
+                           4)terminated by a null character(null - > character with a value of zero)
+                           5)referred to as zero or null terminate strings
+  2.string literal:1)sequence of characters in double quotes
+                   2)constant
+                   3)terminated with null character
+  3.#include <cstdlib> includes functions to convert c-style strings to integer, float, long and etc.
+  4.strcpy(full_name, first_name); //string copy
+    strcat(full_name, " "); //concaternate
+    strcmp(string1, string2) == 0; //same -> 0 different -> return sth. else
+    
+//c++ stings e.g. string my_name = "Brooks";
+  1.features:1)#include <string>
+             2)std namespace
+             3)contiguous in memory
+             4)dynamic size ! different from c-style string
+             5)work with input and output streams
+             6)lots of useful member function
+             7)our familiar operators can be used(+, =, <, ...)
+             8)can be easily converted to c-style strings if needed
+             9)safer
+  2.string s1 {"Brooks"};
+    string s2 {"Brooks", 3}; //include index 0, 1, 2
+    string s3 {s1, 0, 2}; //Br
+    string s4 (3, 'X') //XXX 
+  3.substrings:1).substr(start_index, length)
+               2).find(search_string) //return the first index
+               3).erase(start_index, length)
+               4).clear()
+               5).length()
+  4.getline(cin, s1) //read entire line until \n
+    getline(cin, s1, 'x') // read entire line until 'x'
+    
+//passing arrays to functions
+  1.the array elements are NOT copied(adress), we need to pass in the size(size_t)
+  2.since the array name evaluates to the location of the array in memory - this address is what is copied
+  3.so the function has no idea how many elements are in the array since all it knows is the location of the first element (the
+    name of the array)
+    
+//scope rules
+  1.static means be initialized when we call this function first time and then this variable will retain its value
+
+//how do function calls work
+  1.functions use the 'function call stack':1)analegous to a stack of books
+                                            2)LIFO - Last In First Out
+                                            3)push and pop
+  2.stack frame or activation record: 1)functions must return control to function that called it
+                                      2)each time a funtion is called we create an new activation record and push it on stack
+                                      3)when a function terminates we pop the activation record and return
+  
